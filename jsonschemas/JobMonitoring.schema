@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "type": "object",
   "properties": {
     "AccountingGroup": {
       "type": "string"
@@ -41,10 +42,10 @@
       "type": "integer"
     },
     "CMSGroups": {
+      "type": "array",
       "items": {
         "type": "string"
-      },
-      "type": "array"
+      }
     },
     "CMSPrimaryDataTier": {
       "type": "string"
@@ -85,10 +86,16 @@
     "CMSSite": {
       "type": "string"
     },
+    "CMS_CampaignType": {
+      "type": "string"
+    },
     "CMS_JobRetryCount": {
       "type": "integer"
     },
     "CMS_JobType": {
+      "type": "string"
+    },
+    "CMS_Pool": {
       "type": "string"
     },
     "CMS_SubmissionTool": {
@@ -177,6 +184,9 @@
     },
     "CRAB_PostJobStatus": {
       "type": "string"
+    },
+    "CRAB_PostJobLastUpdate": {
+      "type": "number"
     },
     "CRAB_PrimaryDataset": {
       "type": "string"
@@ -305,7 +315,9 @@
       "type": "integer"
     },
     "ChirpCMSSW_SiteIO": {
+      "type": "array",
       "items": {
+        "type": "object",
         "properties": {
           "ChirpString": {
             "type": "string"
@@ -325,10 +337,8 @@
           "ReadBytes",
           "ReadTimeMS",
           "SiteName"
-        ],
-        "type": "object"
-      },
-      "type": "array"
+        ]
+      }
     },
     "ChirpCMSSW_cmsRun1_Done": {
       "type": "boolean"
@@ -681,6 +691,18 @@
     "Chirp_WMCore_cmsRun_Exception_Message": {
       "type": "string"
     },
+    "Chirp_WMCore_cmsRun2_Exception_Message": {
+      "type": "string"
+    },
+    "Chirp_WMCore_cmsRun3_Exception_Message": {
+      "type": "string"
+    },
+    "Chirp_WMCore_cmsRun4_Exception_Message": {
+      "type": "string"
+    },
+    "Chirp_WMCore_cmsRun5_Exception_Message": {
+      "type": "string"
+    },
     "Chirp_WMCore_cmsRun_ExitCode": {
       "type": "integer"
     },
@@ -868,10 +890,10 @@
       "type": "string"
     },
     "DESIRED_Sites": {
+      "type": "array",
       "items": {
         "type": "string"
-      },
-      "type": "array"
+      }
     },
     "Dashboard_Id": {
       "type": "integer"
@@ -892,10 +914,10 @@
       "type": "integer"
     },
     "DataLocations": {
+      "type": "array",
       "items": {
         "type": "string"
-      },
-      "type": "array"
+      }
     },
     "DataLocationsCount": {
       "type": "integer"
@@ -1102,6 +1124,9 @@
       "type": "integer"
     },
     "IOWait": {
+      "type": "number"
+    },
+    "IotokensProvisioned": {
       "type": "integer"
     },
     "ImageSize": {
@@ -1150,6 +1175,15 @@
       "type": "string"
     },
     "JobCpus": {
+      "type": "integer"
+    },
+    "JobCurrentFinishTransferInputDate": {
+      "type": "integer"
+    },
+    "JobCurrentFinishTransferOutputDate": {
+      "type": "integer"
+    },
+    "JobCurrentStartTransferInputDate": {
       "type": "integer"
     },
     "JobCurrentStartDate": {
@@ -1296,6 +1330,9 @@
     "MachineAttrCpus8": {
       "type": "integer"
     },
+    "MachineAttrCMSSubSiteName0": {
+      "type": "string"
+    },
     "MachineAttrDIRACBenchmark0": {
       "type": "number"
     },
@@ -1321,6 +1358,9 @@
       "type": "string"
     },
     "MachineAttrGLIDEIN_CMSSite8": {
+      "type": "string"
+    },
+    "MachineAttrGLIDEIN_Gatekeeper0": {
       "type": "string"
     },
     "MachineAttrGLIDEIN_ToDie0": {
@@ -1434,6 +1474,9 @@
     "Notification": {
       "type": "null"
     },
+    "NotifyUser": {
+      "type": "string"
+    },
     "NumJobCompletions": {
       "type": "integer"
     },
@@ -1486,10 +1529,10 @@
       "type": "integer"
     },
     "Original_DESIRED_Sites": {
+      "type": "array",
       "items": {
         "type": "string"
-      },
-      "type": "array"
+      }
     },
     "OtherJobRemoveRequirements": {
       "type": "integer"
@@ -1570,6 +1613,12 @@
       "type": "integer"
     },
     "RecentStatsLifetimeStarter": {
+      "type": "integer"
+    },
+    "RecentStatsTickTimeStarter": {
+      "type": "integer"
+    },
+    "RecentWindowMaxStarter": {
       "type": "integer"
     },
     "RecordTime": {
@@ -1701,6 +1750,9 @@
     "StarterIpAddr": {
       "type": "string"
     },
+    "StatsLastUpdateTimeStarter": {
+      "type": "integer"
+    },
     "StatsLifetime": {
       "type": "integer"
     },
@@ -1736,6 +1788,18 @@
     },
     "TransferErr": {
       "type": "boolean"
+    },
+    "TransferInFinished": {
+      "type": "integer"
+    },
+    "TransferInStarted": {
+      "type": "integer"
+    },
+    "TransferOutFinished": {
+      "type": "integer"
+    },
+    "TransferOutStarted": {
+      "type": "integer"
     },
     "TransferInputSizeMB": {
       "type": "integer"
@@ -1822,6 +1886,7 @@
       "type": "integer"
     },
     "metadata": {
+      "type": "object",
       "properties": {
         "spider_git_hash": {
           "type": "string"
@@ -1845,8 +1910,7 @@
         "spider_runtime",
         "spider_source",
         "spider_username"
-      ],
-      "type": "object"
+      ]
     },
     "orig_FERMIHTC_OrigPool": {
       "type": "string"
@@ -1855,10 +1919,10 @@
       "type": "string"
     },
     "x509UserProxyFQAN": {
+      "type": "array",
       "items": {
         "type": "string"
-      },
-      "type": "array"
+      }
     },
     "x509UserProxyFirstFQAN": {
       "type": "string"
@@ -1868,6 +1932,12 @@
     },
     "x509userproxysubject": {
       "type": "string"
+    },
+    "ExeExitCode": {
+      "type": "integer"
+    },
+    "JobExitCode": {
+      "type": "integer"
     }
   },
   "required": [
@@ -1898,8 +1968,10 @@
     "CMSSWWallHrs",
     "CMSSW_Versions",
     "CMSSite",
+    "CMS_CampaignType",
     "CMS_JobRetryCount",
     "CMS_JobType",
+    "CMS_Pool",
     "CMS_SubmissionTool",
     "CMS_TaskType",
     "CMS_Type",
@@ -1927,6 +1999,7 @@
     "CRAB_MaxPost",
     "CRAB_NoWNStageout",
     "CRAB_OutLFNDir",
+    "CRAB_PostJobLastUpdate",
     "CRAB_PostJobLogURL",
     "CRAB_PostJobStatus",
     "CRAB_PrimaryDataset",
@@ -2084,9 +2157,13 @@
     "Chirp_CRAB3_Job_ExitCode",
     "Chirp_WMCore_cmsRun1_Exception_Message",
     "Chirp_WMCore_cmsRun1_ExitCode",
+    "Chirp_WMCore_cmsRun2_Exception_Message",
     "Chirp_WMCore_cmsRun2_ExitCode",
+    "Chirp_WMCore_cmsRun3_Exception_Message",
     "Chirp_WMCore_cmsRun3_ExitCode",
+    "Chirp_WMCore_cmsRun4_Exception_Message",
     "Chirp_WMCore_cmsRun4_ExitCode",
+    "Chirp_WMCore_cmsRun5_Exception_Message",
     "Chirp_WMCore_cmsRun5_ExitCode",
     "Chirp_WMCore_cmsRun_Exception_Message",
     "Chirp_WMCore_cmsRun_ExitCode",
@@ -2231,6 +2308,7 @@
     "ImageSize",
     "InputData",
     "InputGB",
+    "IotokensProvisioned",
     "IsGridpack",
     "IsProxyWatcher",
     "JOBGLIDEIN_ResourceName",
@@ -2244,8 +2322,11 @@
     "JobCoreDumped",
     "JobCoreFileName",
     "JobCpus",
+    "JobCurrentFinishTransferInputDate",
+    "JobCurrentFinishTransferOutputDate",
     "JobCurrentStartDate",
     "JobCurrentStartExecutingDate",
+    "JobCurrentStartTransferInputDate",
     "JobCurrentStartTransferOutputDate",
     "JobDuration",
     "JobExitCode",
@@ -2283,6 +2364,7 @@
     "MATCH_GLIDEIN_Gatekeeper",
     "MATCH_GLIDEIN_ToDie",
     "MATCH_GLIDEIN_ToRetire",
+    "MachineAttrCMSSubSiteName0",
     "MachineAttrCpus0",
     "MachineAttrCpus1",
     "MachineAttrCpus2",
@@ -2301,6 +2383,7 @@
     "MachineAttrGLIDEIN_CMSSite6",
     "MachineAttrGLIDEIN_CMSSite7",
     "MachineAttrGLIDEIN_CMSSite8",
+    "MachineAttrGLIDEIN_Gatekeeper0",
     "MachineAttrGLIDEIN_ToDie0",
     "MachineAttrGLIDEIN_ToDie1",
     "MachineAttrGLIDEIN_ToDie2",
@@ -2338,6 +2421,7 @@
     "MinCores",
     "MinHosts",
     "Notification",
+    "NotifyUser",
     "NumJobCompletions",
     "NumJobMatches",
     "NumJobReconnects",
@@ -2383,6 +2467,8 @@
     "RecentBlockWriteBytes",
     "RecentStatsLifetime",
     "RecentStatsLifetimeStarter",
+    "RecentStatsTickTimeStarter",
+    "RecentWindowMaxStarter",
     "RecordTime",
     "ReleaseReason",
     "RemoteCondorSetup",
@@ -2426,6 +2512,7 @@
     "StartdIpAddr",
     "StartdPrincipal",
     "StarterIpAddr",
+    "StatsLastUpdateTimeStarter",
     "StatsLifetime",
     "StatsLifetimeStarter",
     "Status",
@@ -2438,8 +2525,12 @@
     "TotalSubmitProcs",
     "TotalSuspensions",
     "TransferErr",
+    "TransferInFinished",
+    "TransferInStarted",
     "TransferInputSizeMB",
     "TransferOut",
+    "TransferOutFinished",
+    "TransferOutStarted",
     "TransferOutputRemaps",
     "TransferQueued",
     "TransferringInput",
@@ -2473,6 +2564,5 @@
     "x509UserProxyFirstFQAN",
     "x509UserProxyVOName",
     "x509userproxysubject"
-  ],
-  "type": "object"
+  ]
 }
